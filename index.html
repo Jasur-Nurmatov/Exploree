@@ -144,12 +144,116 @@
         color: #22283C;
 
     }
-
+    /* header end */
+    /* main start */
+    .main__ticket{
+    margin-bottom: 96px;
+    }
+    .main__ticket-content{
+        transform: translateY(-40%);
+    }
+    .main__ticket-btns{
+        display: flex;
+        gap: 10px;
+    }
+    .main__ticket-btn{
+        padding: 8px 27px 7px 10px;
+        border: none;
+        background: white;
+        border-radius: 4px 4px 0 0;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        transition: .3s;
+    }
+    .main__ticket-btn span{
+        font-family: var(--PP600);
+        line-height: 24px;
+        color: #1F3347;
+        text-align: center;
+        }
+    .main__ticket-btn:hover{
+        background: #FFC814;
+    }
+    .main__ticket-form{
+        padding: 38px 30px;
+        align-items: center;
+        box-shadow: 0px 6px 24px 0px #E4E2EE;
+        background: white;
+    }
+    .main__ticket-label{
+        font-family: var(--PP600);
+        line-height: 24px;
+        color: #1F3347;
+        padding-bottom: 7px;
+    }
+    .main__ticket-select{
+        font-family: var(--PP400);
+        line-height: 15px;
+        color: #70717B;
+        padding: 20px 0 21px 10px;
+        border-radius: 4px;
+        box-shadow: 0px 6px 24px 0px #E4E2EE;
+        border: none;
+        max-width: 170px;
+        width: 100%;
+        outline: none;
+    }
+    .main__ticket-input{
+        font-family: var(--PP400);
+        line-height: 15px;
+        color: #70717B;
+        padding: 20px 0 21px 10px;
+        border-radius: 4px;
+        box-shadow: 0px 6px 24px 0px #E4E2EE;
+        border: none;
+        max-width: 170px;
+        width: 100%;
+        outline: none;
+    }
+    .main__ticket-list{
+        display: flex;
+        align-items: center;
+        gap: 35px;
+    }
+    .main__ticket-item{
+        display: flex;
+        flex-direction: column;
+    }
+    .main__ticket-button{
+        font-family: var(--PP700);
+        line-height: 24px;
+        color: #22283C;
+        background: #FFC814;
+        border-radius: 4px;
+        cursor: pointer;
+        box-shadow: 0px 6px 24px 0px #FFC81466;
+        border: none;
+        padding: 16px 30px;
+        margin-top: 7px;
+    }
+/* main end */
     /* header end */
     /* media start */
-    @media (max-width:1200px){
+    @media (max-width:1230px){
         .container{
             max-width: 992px;
+        }
+        .main__ticket-content{
+            transform: translateY(-20%);
+        }
+        .main__ticket-list{
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        gap: 17px;
+        }
+        .main__ticket-form{
+            padding: 28px 20px;
+        }
+        .header__content-info{
+            margin-top: 50px;
         }
     }
     @media (max-width:1024px){
@@ -177,6 +281,9 @@
         }
         .header__content-text{
             margin: 17px 0 7px 0;
+        }   
+        .main__ticket-content{
+            transform: translateY(-10%);
         }
     }
     @media (max-width:797px){
@@ -196,6 +303,9 @@
         }
         .header__content-title{
             max-width: 455px;
+        }
+        .main__ticket-btn{
+            padding: 8px 47px 7px 13px;
         }
     }
     @media (max-width:585px){
@@ -230,6 +340,26 @@
             display: block;
             font-size: 25px;
             color: white;
+        }
+        .main__ticket-btn span{
+            display: none;
+        }
+        .main__ticket-list{
+            flex-direction: column;
+        }
+        .main__ticket-btns{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .main__ticket-btn{
+            padding: 8px 20px 7px 20px;
+        }
+        .header__content-info{
+            margin-top: 115px;
+        }
+        .main__ticket-select{
+            padding: 20px 90px 21px 10px;
         }
     }
 
@@ -301,5 +431,59 @@
             </div>
         </div>
     </header>
+    <main class="main">
+        <div class="main__ticket">
+            <div class="main__ticket-content container">
+                <div class="main__ticket-btns">
+                    <button class="main__ticket-btn">
+                        <img src="images/logo1.svg" alt="" class="main__ticket-img">
+                        <span>Hotel</span>
+                    </button>
+                    <button class="main__ticket-btn">
+                        <img src="images/logo2.svg" alt="" class="main__ticket-img">
+                        <span>Flight</span>
+                    </button>
+                    <button class="main__ticket-btn">
+                        <img src="images/logo3.svg" alt="" class="main__ticket-img">
+                        <span>Car</span>
+                    </button>
+                    <button class="main__ticket-btn">
+                        <img src="images/logo4.svg" alt="" class="main__ticket-img">
+                        <span>Ship</span>
+                    </button>
+                </div>
+                <form action="" class="main__ticket-form">
+                    <div class="main__ticket-list">
+                    <div class="main__ticket-item">
+                    <label for="name" class="main__ticket-label">Your Destination</label>
+                    <select name="" id="" class="main__ticket-select" required>
+                        <option value="">Thailand</option>
+                        <option value="">UZB</option>
+                        <option value="">USA</option>
+                        <option value="">PARIS</option>
+                    </select>
+                </div>
+                    <div class="main__ticket-item">
+                    <label for="name" class="main__ticket-label">Check In</label>
+                    <input type="number" class="main__ticket-input" required placeholder="01-26-22">
+                </div>
+                    <div class="main__ticket-item">
+                    <label for="name" class="main__ticket-label">Check Out</label>
+                    <input type="number" class="main__ticket-input" required placeholder="01-30-22">
+                </div>
+                    <div class="main__ticket-item">
+                    <label for="name" class="main__ticket-label">Child</label>
+                    <input type="number" class="main__ticket-input" required placeholder="2">
+                </div>
+                    <div class="main__ticket-item">
+                    <label for="name" class="main__ticket-label">Adultck In</label>
+                    <input type="number" class="main__ticket-input" required placeholder="3">
+                </div>
+                <button class="main__ticket-button">Book Now</button>
+                </div>
+                </form>
+            </div>
+        </div>
+    </main>
 </body>
 </html>
